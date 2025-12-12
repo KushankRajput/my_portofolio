@@ -1296,6 +1296,26 @@ body {
     flex-direction: column;
     gap: 12px;
   }
+      .floating-icon.php {
+    top: 70px;
+    left: 20px;
+  }
+
+  .floating-icon.laravel {
+    top: 40px;
+    right: 60px;
+  }
+
+  .floating-icon.nodejs {
+    bottom: 20px;
+    left: 60px;
+  }
+
+  .floating-icon.db {
+    bottom: 30px;
+    right: 30px;
+  }
+  
 
   .skill-tag {
     padding: 0.5rem 1rem;

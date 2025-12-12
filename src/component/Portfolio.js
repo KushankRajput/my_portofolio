@@ -717,7 +717,7 @@ const Portfolio = () => {
             transition={{ duration: 0.5 }}
           >
             <h3 className="skill-category-title">
-              <FaCode className="category-icon" /> Languages & Frameworks
+              <FaCode className="category-icon" /> Languages
             </h3>
             <div className="skill-tags">
               {[
