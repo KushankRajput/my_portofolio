@@ -281,7 +281,8 @@ body {
   border-radius: 50%;
   overflow: hidden;
   background: linear-gradient(135deg, #667eea, #764ba2);
-  box-shadow: 0 0 60px rgba(102, 126, 234, 0.5),
+  box-shadow:
+    0 0 60px rgba(102, 126, 234, 0.5),
     0 0 100px rgba(118, 75, 162, 0.3);
   position: relative;
   z-index: 10;
@@ -1055,6 +1056,7 @@ body {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
+.contact-form input[type="tel"],
 .contact-form textarea {
   width: 100%;
   padding: 0.9rem 1rem;
@@ -1296,7 +1298,7 @@ body {
     flex-direction: column;
     gap: 12px;
   }
-      .floating-icon.php {
+  .floating-icon.php {
     top: 70px;
     left: 20px;
   }
@@ -1315,7 +1317,6 @@ body {
     bottom: 30px;
     right: 30px;
   }
-  
 
   .skill-tag {
     padding: 0.5rem 1rem;

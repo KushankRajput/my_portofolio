@@ -228,7 +228,7 @@ const Portfolio = () => {
           >
             <div className="image-placeholder">
               <div className="profile-image">
-                <img src="/asset/main.png" alt="Profile" />
+                <img src="/asset/logo.png" alt="Profile" />
               </div>
               <div className="floating-icons">
                 <motion.div
@@ -448,7 +448,7 @@ const Portfolio = () => {
 
         <div className="projects-container">
           <motion.a
-            href="https://www.quicksheetapp.com/"
+            href="https://www.markupdesigns.net/arbutus-web/"
             target="_blank"
             rel="noopener noreferrer"
             className="project-card"
@@ -458,42 +458,17 @@ const Portfolio = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="project-header">
-              <h3 className="project-title">QuickSheet App</h3>
+              <h3 className="project-title">Arbutus - Trading Platform</h3>
               <FaExternalLinkAlt className="project-link-icon" />
             </div>
             <p className="project-description">
-              A comprehensive sheet management application designed for
-              efficient data organization and collaboration.
+              A comprehensive trading platform designed for seamless market
+              analysis, real-time data tracking, and investment management.
             </p>
             <div className="project-tags">
-              <span className="project-tag">Laravel</span>
-              <span className="project-tag">MySQL</span>
-              <span className="project-tag">REST API</span>
-            </div>
-          </motion.a>
-
-          <motion.a
-            href="https://www.markupdesigns.net/mai-web/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div className="project-header">
-              <h3 className="project-title">MAI - Construction Management</h3>
-              <FaExternalLinkAlt className="project-link-icon" />
-            </div>
-            <p className="project-description">
-              Advanced construction management system handling projects,
-              documents, workflows, and team collaboration seamlessly.
-            </p>
-            <div className="project-tags">
-              <span className="project-tag">Laravel</span>
-              <span className="project-tag">Project Management</span>
-              <span className="project-tag">Workflow</span>
+              <span className="project-tag">Trading</span>
+              <span className="project-tag">Real-time Data</span>
+              <span className="project-tag">Analytics</span>
             </div>
           </motion.a>
 
@@ -523,7 +498,61 @@ const Portfolio = () => {
           </motion.a>
 
           <motion.a
-            href="https://www.markupdesigns.net/cepasconexion/admin/login"
+            href="https://www.markupdesigns.net/morovski-light-web/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="project-header">
+              <h3 className="project-title">Morovski - Lighting E-Commerce</h3>
+              <FaExternalLinkAlt className="project-link-icon" />
+            </div>
+            <p className="project-description">
+              Premium lighting e-commerce platform offering a curated collection
+              of luxury lighting fixtures with secure checkout and global
+              shipping.
+            </p>
+            <div className="project-tags">
+              <span className="project-tag">E-Commerce</span>
+              <span className="project-tag">Lighting</span>
+              <span className="project-tag">Laravel</span>
+            </div>
+          </motion.a>
+
+          <motion.a
+            href="https://www.markupdesigns.net/sport-gems-web/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="project-header">
+              <h3 className="project-title">
+                SportGems - Buy & Sell Marketplace
+              </h3>
+              <FaExternalLinkAlt className="project-link-icon" />
+            </div>
+            <p className="project-description">
+              Global marketplace platform enabling users to buy and sell rare
+              sports memorabilia and collectibles with secure transactions
+              worldwide.
+            </p>
+            <div className="project-tags">
+              <span className="project-tag">Marketplace</span>
+              <span className="project-tag">Buy & Sell</span>
+              <span className="project-tag">Global</span>
+            </div>
+          </motion.a>
+
+          <motion.a
+            href="https://www.markupdesigns.net/qec-web/dashboard/"
             target="_blank"
             rel="noopener noreferrer"
             className="project-card"
@@ -533,17 +562,20 @@ const Portfolio = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="project-header">
-              <h3 className="project-title">CepaConexion Admin Panel</h3>
+              <h3 className="project-title">
+                Qatar Esports - Tournament Platform
+              </h3>
               <FaExternalLinkAlt className="project-link-icon" />
             </div>
             <p className="project-description">
-              Comprehensive admin panel with powerful tools for managing users,
-              content, and business operations efficiently.
+              Esports tournament management platform where admins create
+              competitive gaming events and users participate in real-life
+              tournaments.
             </p>
             <div className="project-tags">
-              <span className="project-tag">Laravel</span>
-              <span className="project-tag">Admin Panel</span>
-              <span className="project-tag">Database</span>
+              <span className="project-tag">Esports</span>
+              <span className="project-tag">Tournaments</span>
+              <span className="project-tag">Gaming</span>
             </div>
           </motion.a>
         </div>
@@ -570,7 +602,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="timeline-date">Aug 2025 – Present</div>
+            <div className="timeline-date">July 2025 – Present</div>
             <div className="timeline-content">
               <h3 className="timeline-title">
                 Laravel Developer — Markup Designs Pvt. Ltd.
@@ -600,7 +632,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="timeline-date">Aug 2024 – Dec 2024</div>
+            <div className="timeline-date">July 2024 – Dec 2024</div>
             <div className="timeline-content">
               <h3 className="timeline-title">
                 Laravel Developer — Business2Sell Group
