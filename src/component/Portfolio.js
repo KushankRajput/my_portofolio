@@ -6,13 +6,11 @@ import {
   FaEnvelope,
   FaPhone,
   FaLinkedin,
-  FaGithub,
   FaLaravel,
   FaPhp,
   FaDatabase,
   FaCode,
   FaGraduationCap,
-  FaBriefcase,
   FaTools,
   FaCheckCircle,
   FaExternalLinkAlt,
@@ -263,21 +261,6 @@ const Portfolio = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* <div className="contact-info">
-          <div className="contact-item">
-            <FaEnvelope />
-            <span>kushankraj1604@gmail.com</span>
-          </div>
-          <div className="contact-item">
-            <FaPhone />
-            <span>9368012393</span>
-          </div>
-          <div className="contact-item">
-            <FaBriefcase />
-            <span>Noida, India</span>
-          </div>
-        </div> */}
       </section>
 
       {/* About Section */}
