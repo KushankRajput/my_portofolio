@@ -19,10 +19,8 @@ import {
 } from "react-icons/fa";
 import "./Portfolio.css";
 
-// EmailJS Configuration
-const EMAILJS_SERVICE_ID = "service_idkvvxw"; // 👈 apna service id daalna
-const EMAILJS_TEMPLATE_ID = "template_r4hhaja"; // 👈 apna template id daalna
-const EMAILJS_PUBLIC_KEY = "edkMLzzYzOaTFap1H"; // 👈 apna public key daalna
+// Contact API Configuration
+const CONTACT_API_URL = "https://website-sigma-opal-60.vercel.app/contact";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -74,13 +72,11 @@ const Portfolio = () => {
     const form = formRef.current;
     if (!form) return;
 
-    // Basic client-side validation
-    const name = form["name"].value.trim();
+    const fullName = form["fullName"].value.trim();
     const email = form["email"].value.trim();
-    const subject = form["subject"].value.trim();
-    const message = form["message"].value.trim();
+    const phone = form["phone"].value.trim();
 
-    if (!name || !email || !message) {
+    if (!fullName || !email || !phone) {
       toast.error("❌ Please fill all required fields!");
       return;
     }
@@ -88,27 +84,26 @@ const Portfolio = () => {
     setSending(true);
 
     try {
-      // Dynamic import EmailJS
-      const emailjs = await import("@emailjs/browser");
+      const response = await fetch(CONTACT_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          phone,
+        }),
+      });
 
-      // Initialize EmailJS
-      if (emailjs && emailjs.init) {
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
       }
 
-      // Send form
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
-
-      // Success response
       toast.success("✅ Message sent successfully!");
       form.reset();
-
-      // Redirect after 3 seconds
-      setTimeout(() => {
-        window.history.back();
-      }, 3000);
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("Contact API Error:", error);
       toast.error("❌ Failed to send message. Please try again later.");
     } finally {
       setSending(false);
@@ -805,23 +800,33 @@ const Portfolio = () => {
             className="contact-form"
           >
             <label>
-              Name<span className="required">*</span>
-              <input type="text" name="name" required />
+              Full Name<span className="required">*</span>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Your full name"
+                required
+              />
             </label>
 
             <label>
               Email<span className="required">*</span>
-              <input type="email" name="email" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
             </label>
 
             <label>
-              Subject
-              <input type="text" name="subject" placeholder="Brief subject" />
-            </label>
-
-            <label>
-              Message<span className="required">*</span>
-              <textarea name="message" rows="6" required></textarea>
+              Phone<span className="required">*</span>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your phone number"
+                required
+              />
             </label>
 
             <button type="submit" className="btn-primary" disabled={sending}>
