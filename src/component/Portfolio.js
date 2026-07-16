@@ -75,7 +75,7 @@ const Portfolio = () => {
     const phone = form["phone"].value.trim();
 
     if (!fullName || !email || !phone) {
-      toast.error("❌ Please fill all required fields!");
+      toast.error("Please fill all required fields!");
       return;
     }
 
@@ -816,32 +816,17 @@ const Portfolio = () => {
           >
             <label>
               Full Name<span className="required">*</span>
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Your full name"
-                required
-              />
+              <input type="text" name="fullName" placeholder="Your full name" />
             </label>
 
             <label>
               Email<span className="required">*</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-                required
-              />
+              <input type="email" name="email" placeholder="your@email.com" />
             </label>
 
             <label>
               Phone<span className="required">*</span>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Your phone number"
-                required
-              />
+              <input type="tel" name="phone" placeholder="Your phone number" />
             </label>
 
             <button type="submit" className="btn-primary" disabled={sending}>
